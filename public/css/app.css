@@ -1,0 +1,44 @@
+.quadrado {
+    width:30px;
+    height:30px;
+    border: 25px solid; /* As 4 bordas sólidas com 25px de espessura */
+    border-color: rgb(255, 255, 255) #fff #fff #fff; /* cores: topo, direita, inferior, esquerda */
+    }
+
+
+    .btnColor {
+        min-height: 101px !important;
+    }
+
+    .imagemJS {
+        width: inherit;
+    }
+
+
+    .tituloDiv {
+        width: 75%;
+        box-shadow: 7px 6px 11px -1px #fffefe91;
+        background-color: #020200;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+
+    .btnTrocaFonte {
+        font-size: 12px;
+        min-width: -webkit-fill-available;
+    }
+
+    .btnFatorial {
+        font-size: 12px;
+    }
+
+    span.autor {
+        color: #f4d93b;
+        font-weight: bold;
+        font-family: Roboto;
+    }

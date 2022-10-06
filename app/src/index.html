@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINKS EXTERNOS -->
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!---->
+
+    <!-- LINKS INTERNOS -->
+       <script src="../../public/js/app.js"></script>
+       <link href="../../public/css/app.css" rel="stylesheet" >
+
+    <!---->
+    <title>Página JS</title>
+</head>
+<body style="background-color: #000;">
+
+    <div class="col-md-12">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6" style="margin-top: 10%;">
+                <div class="tituloDiv">
+                    <h1 style="color: rgb(245 245 245 / 80%);font-family: 'Roboto';">Trabalho JS</h1><br>
+                    <img src="../../public/image/js.jpg" class="imagemJS"><br><br>
+
+                    <span class="autor">André Leite - 391656011518</span>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-top: 10%;">
+                <h2 style="color: rgba(255, 255, 255, 0.959)">Exercicio 1</h1>
+                    <h3 style="color: #d8d8d8">Mostrando mensagem na tela</h3><br>
+
+                <button type="button" class="btn btn-primary" onclick="aula1()">Mostrar mensagem</button>           
+                <br><hr style="color: #fff">
+
+                <h2 style="color: rgba(255, 255, 255, 0.959)">Exercicio 2</h1>
+                    <h3 style="color: #d8d8d8">Mudando cores</h3><br>
+
+                    <div class="row" style="padding-top: 10px; padding-bottom: 10px">
+                        <div class="col-md-6">
+                            <span style="color:#fff" name="exercicioCor" id="exercicioCor">Testando cor de fonte e página</span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="quadrado" name="quadradoCor" id="quadradoCor"></div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 20px">
+                        
+                        <div class="col">
+                            <button type="button" class="btn btn-danger btnColor" onclick="trocaCorDoTexto('#dc3545', 'exercicioCor')">Trocar cor texto</button>           
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger btnColor" onclick="trocaCorDoQuadrado('#dc3545', 'quadradoCor')">Trocar cor quadrado</button>           
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-warning btnColor" onclick="trocaCorDoTexto('#ffc107', 'exercicioCor')">Trocar cor texto</button>           
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-warning btnColor" onclick="trocaCorDoQuadrado('#ffc107', 'quadradoCor')">Trocar cor quadrado</button>           
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-success btnColor" onclick="trocaCorDoQuadrado('#fff', 'quadradoCor'); trocaCorDoTexto('#fff', 'exercicioCor')">Reinicia</button>           
+                        </div>                   
+                    </div>
+                    <br><hr style="color: #fff">
+                    
+                    <h2 style="color: rgba(255, 255, 255, 0.959)">Exercicio 3</h1>
+                        <div class="row" style="padding-top: 10px; padding-bottom: 10px">
+                            <div class="col-md-12">
+                                <span style="color:#fff" name="trocarFonte" id="trocarFonte">Trocar Fonte</span>
+                            </div>                           
+                        </div>
+                        <div class="row" style="padding-top: 20px">
+                            
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnTrocaFonte" onclick="trocarFonte('cursive')">Cursiva</button>           
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnTrocaFonte" onclick="trocarFonte('ui-sans-serif')">Sans - Serif</button>           
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnTrocaFonte" onclick="trocarFonte('Open Sans')">Open Sans</button>           
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnTrocaFonte" onclick="trocarFonte('Roboto')">Roboto</button>           
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnTrocaFonte" onclick="trocarFonte('tahoma')">Tahoma</button>           
+                            </div>                   
+                        </div>
+                    <br><hr style="color: #fff">
+
+                    <h2 style="color: rgba(255, 255, 255, 0.959)">Exercicio 4 e 5</h1>
+                        <h3 style="color: #d8d8d8">Tabuada</h3><br>
+                        <input type="text" id="valorTabuada" class="form-control" placeholder="Valor a ser usado"><br>
+                        <button type="button" class="btn btn-success " onclick="gerarTabuada();">Gerar Tabuada</button>     
+                        <br><br>
+                        <table class="table table-dark" style="display: none;" id="resultadoTabuada">
+                            <thead>
+                              <tr>
+                                <th scope="col" id="tabuadaDo">#</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td id="resultado1"></td>
+                              </tr>
+                              <tr>
+                                <td id="resultado2"></td>                              
+                              </tr>
+                              <tr>
+                                <td id="resultado3"></td>                                                              
+                              </tr>
+                              <tr>
+                                <td id="resultado4"></td>                                                              
+                              </tr>
+                              <tr>
+                                <td id="resultado5"></td>                                                              
+                              </tr>
+                              <tr>
+                                <td id="resultado6"></td>                                                              
+                              </tr>
+                              <tr>
+                                <td id="resultado7"></td>                                                              
+                              </tr>
+                              <tr>
+                                <td id="resultado8"></td>                                                              
+                              </tr>
+                              <tr>
+                                <td id="resultado9"></td>                                                              
+                              </tr>
+                              <tr>
+                                <td id="resultado10"></td>                                                                                              
+                              </tr>
+                            </tbody>
+                          </table>
+
+                      <br><hr style="color: #fff">
+  
+
+                      <h2 style="color: rgba(255, 255, 255, 0.959)">Exercicio 6</h1>
+                        <h3 style="color: #d8d8d8">Desafio do Fatorial</h3><br>
+    
+                        <div class="row" style="padding-top: 20px">
+                            
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnFatorial" onclick="gerarFatorial(2)">Gerar Fatorial de 2</button>           
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnFatorial" onclick="gerarFatorial(6)">Gerar Fatorial de 6</button>           
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnFatorial" onclick="gerarFatorial(8)">Gerar Fatorial de 8</button>           
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary btnFatorial" onclick="gerarFatorial(10)">Gerar Fatorial de 10</button>           
+                            </div>                                          
+                        </div>        
+                    <br><br><br>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
