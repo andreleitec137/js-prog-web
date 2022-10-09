@@ -3,7 +3,7 @@ function mostrarNaTela(){
     alert(mensagem);
 }
 
-function aula1(){
+function mostrarMensagem(){
     var mensagem = "Olá, bem-vindo ao site";
     alert(mensagem);
 }
@@ -25,7 +25,8 @@ function gerarTabuada(){
 
     var valor = document.getElementById("valorTabuada").value;
     const element = document.getElementById("tabuadaDo");
-        element.innerHTML = "Tábuada do " + valor;
+    element.innerHTML = "Tábuada do " + valor;
+    
     for(i = 1; i < 11; i++){
         var resultado = valor * i;
         const element = document.getElementById("resultado" + i);
@@ -35,4 +36,35 @@ function gerarTabuada(){
 
 function trocarFonte(fonte){
     document.getElementById('trocarFonte').style.fontFamily = fonte;
+}
+
+function gerarFatorial(numeroOrigem){
+
+    const fatorial = (numero) => {
+        if (numero < 0) return false;
+        return numero === 0 ? 1 : numero * fatorial(numero - 1);
+    };
+
+    let resultadoFinal = fatorial(numeroOrigem);
+
+    const element = document.getElementById("resultadoFatorial");
+    element.innerHTML = "Fatorial de " + numeroOrigem + " = " + resultadoFinal;
+}
+
+
+function gerarFatorialDinamico(){
+
+    var numeroOrigem = document.getElementById("fatoriallDinamico").value;
+
+    if(numeroOrigem == "") numeroOrigem = 0;
+    
+    const fatorial = (numero) => {
+        if (numero < 0) return false;
+        return numero === 0 ? 1 : numero * fatorial(numero - 1);
+    };
+
+    let resultadoFinal = fatorial(numeroOrigem);
+
+    const element = document.getElementById("resultadoFatorialDinamico");
+    element.innerHTML = "Fatorial de " + numeroOrigem + " = " + resultadoFinal;
 }

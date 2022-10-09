@@ -40,7 +40,7 @@
                 <h2 style="color: rgba(255, 255, 255, 0.959)">Exercicio 1</h1>
                     <h3 style="color: #d8d8d8">Mostrando mensagem na tela</h3><br>
 
-                <button type="button" class="btn btn-primary" onclick="aula1()">Mostrar mensagem</button>           
+                <button type="button" class="btn btn-primary" onclick="mostrarMensagem()">Mostrar mensagem</button>           
                 <br><hr style="color: #fff">
 
                 <h2 style="color: rgba(255, 255, 255, 0.959)">Exercicio 2</h1>
@@ -111,7 +111,7 @@
                                 <th scope="col" id="tabuadaDo">#</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody>                                
                               <tr>
                                 <td id="resultado1"></td>
                               </tr>
@@ -165,7 +165,28 @@
                             <div class="col">
                                 <button type="button" class="btn btn-secondary btnFatorial" onclick="gerarFatorial(10)">Gerar Fatorial de 10</button>           
                             </div>                                          
-                        </div>        
+                        </div><br>
+                        <div class="divResultadoFatorial">
+                            <span id="resultadoFatorial" class="resultadoSpanFatorial">Aguardando comando...</span>
+                        </div>
+                        <br><hr style="color: #fff">
+
+
+                    
+                    <h2 style="color: rgba(255, 255, 255, 0.959)">Extra</h1>
+                        <h3 style="color: #d8d8d8">Fatorial com qualquer número</h3><br>
+    
+                        <div class="row" style="padding-top: 20px">
+                            
+                            <div class="col">
+                                <input type="text" id="fatoriallDinamico" class="form-control" placeholder="Valor a ser usado"><br>
+                                <button type="button" class="btn btn-secondary btnFatorial" onclick="gerarFatorialDinamico()">Gerar Fatorial</button>           
+                            </div>
+                                                            
+                        </div><br>
+                        <div class="divResultadoFatorial">
+                            <span id="resultadoFatorialDinamico" class="resultadoSpanFatorial">Aguardando comando...</span>
+                        </div>
                     <br><br><br>
             </div>
             </div>
